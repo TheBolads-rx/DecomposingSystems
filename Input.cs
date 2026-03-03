@@ -35,11 +35,6 @@ public class Input
                 package.Clear();
             }
 
-            if (lineIndex == 44)
-            {
-                _ = "teste";
-            }
-
             if (remainder > 0)
             {
                 auxPackage = auxLine[(auxLine.Length - remainder)..auxLine.Length];
