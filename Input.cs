@@ -1,47 +1,30 @@
+using System.Text;
+
 namespace Decomposing;
 public class Input
 {
-    public List<List<(int, char)>> core;
     public Input()
     {
-        core = [];
+        Core = [];
+        LineStarts = [];
     }
-    public void ReadDataLines(string path)
+    public List<int> LineStarts;    
+    public List<char[]> Core;
+    public readonly char EndOfWord = '\u0003';
+    public void StoreInCore(string[] lines, int chunk = 4)
     {
-        List<(int line, char character)> package = [];
-        int lineIndex = 1;
-        int remainder = 0;
-        string auxLine;
-        string auxPackage;
-        int lastIndex;
+        if (lines is null) return;       
 
-        foreach (string line in File.ReadLines(path))
+        foreach (string line in lines)
         {
-            auxLine = line.Replace(" ", "# ") + "#";
-            lastIndex = 0;
+            if (string.IsNullOrWhiteSpace(line)) continue;           
 
-            for (int i = 4 - package.Count; i < auxLine.Length; i += 4)
+            LineStarts.Add(Core.Count);            
+            
+            foreach (char[] word in line.Replace(" ", EndOfWord + " ").Chunk(chunk))
             {                
-                auxPackage = auxLine[lastIndex..i];
-                
-                foreach (char item in auxPackage) 
-                {
-                    package.Add((lineIndex, item));
-                }
-
-                core.Add(new List<(int, char)>(package));
-                lastIndex = i;
-                remainder = auxLine.Length - lastIndex;
-                package.Clear();
+                Core.Add(word);
             }
-
-            if (remainder > 0)
-            {
-                auxPackage = auxLine[(auxLine.Length - remainder)..auxLine.Length];
-                foreach (char item in auxPackage) package.Add((lineIndex, item));
-            }
-
-            lineIndex++;
         }
     }
 }
