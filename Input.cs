@@ -1,5 +1,3 @@
-using System.Text;
-
 namespace Decomposing;
 public class Input
 {
