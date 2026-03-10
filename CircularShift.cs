@@ -34,17 +34,21 @@ public class CircularShift
     private List<string> Shifts(string line, char delimiter)
     {
         List<string> circularShifts = [];
-        int i = 0;
+        int j = 0;
+        string auxLine = line;        
+        int delimOccursCount = auxLine.Count(x => x == delimiter);
 
-        do
+        for (int i = 0; i < delimOccursCount; i++)
         {
-            string fromDelimiter = line[line.IndexOf(delimiter, i)..line.Length];
-            string toDemiliter = line[i..line.IndexOf(delimiter, i)];
+            string fromDelimiter = auxLine[auxLine.IndexOf(delimiter, j)..auxLine.Length];
+            string toDemiliter = auxLine[..auxLine.IndexOf(delimiter, j)];
 
-            circularShifts.Add(fromDelimiter.TrimStart() + " " + toDemiliter + delimiter);
+            auxLine = fromDelimiter.TrimStart(delimiter).TrimStart() + " " + toDemiliter + delimiter;
 
-            i = line.IndexOf(delimiter, i);
-        } while (i != -1);
+            circularShifts.Add(auxLine);
+
+            j = auxLine.IndexOf(delimiter, 0);            
+        }
 
         return circularShifts;
     }
