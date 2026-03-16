@@ -1,5 +1,3 @@
-using System.Reflection;
-
 namespace Decomposing;
 public class CircularShift
 {
@@ -27,6 +25,11 @@ public class CircularShift
             ) + delimiter;
 
             shiftedLines = Shifts(line, delimiter);
+
+            // foreach (string item in shiftedLines)
+            // {
+            //     CoreInPairs.Add(item[0];
+            // }
 
             i++;
         } while (i < lineStarts.Count - 1);

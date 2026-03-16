@@ -6,7 +6,7 @@ Input input = new();
 input.StoreInCore(inputFile);
 
 CircularShift circularShift = new();
-circularShift.StoreWordsInPairs(input.Core, input.LineStarts, input.EndOfWord);
+// circularShift.StoreWordsInPairs(input.Core, input.LineStarts, input.EndOfWord);
 
 // for (int i = 0; i < input.Core.Count; i++)
 // {
