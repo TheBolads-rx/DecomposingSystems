@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DecomposingSystems")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96f2cf4e7d66b6090ec4c8f0210818371d2d39f8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d80163ebaeb817f16dac09286809714e92784016")]
 [assembly: System.Reflection.AssemblyProductAttribute("DecomposingSystems")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DecomposingSystems")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

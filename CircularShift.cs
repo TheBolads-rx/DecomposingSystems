@@ -6,53 +6,21 @@ public class CircularShift
     {
         CoreInPairs = [];
     }
-    public void StoreWordsInPairs(List<char[]> core, List<int> lineStarts, char delimiter)
+    public void StoreWordsInPairs(string core, List<int> lineStarts, char delimiter)
     {       
-        List<string> shiftedLines;
-        int i = 0;
+        int lineEnd;
 
-        do
+        for (int i = 0; i < lineStarts.Count; i++)
         {
-            int start = lineStarts[i];
-            int endExclusive = (i + 1 < lineStarts.Count) ? lineStarts[i + 1] : core.Count;
-            int count = endExclusive - start;
+            lineEnd = (i != lineStarts.Count - 1) ? lineStarts[i + 1] : core.Length;
+            string line = core[lineStarts[i]..lineEnd];
+            int wordOffSet = lineStarts[i];
 
-            string line = new string(
-                core.Skip(start)
-                    .Take(count)
-                    .SelectMany(arr => arr)
-                    .ToArray()
-            ) + delimiter;
-
-            shiftedLines = Shifts(line, delimiter);
-
-            // foreach (string item in shiftedLines)
-            // {
-            //     CoreInPairs.Add(item[0];
-            // }
-
-            i++;
-        } while (i < lineStarts.Count - 1);
-    }
-    private List<string> Shifts(string line, char delimiter)
-    {
-        List<string> circularShifts = [];
-        int j = 0;
-        string auxLine = line;        
-        int delimOccursCount = auxLine.Count(x => x == delimiter);
-
-        for (int i = 0; i < delimOccursCount; i++)
-        {
-            string fromDelimiter = auxLine[auxLine.IndexOf(delimiter, j)..auxLine.Length];
-            string toDemiliter = auxLine[..auxLine.IndexOf(delimiter, j)];
-
-            auxLine = fromDelimiter.TrimStart(delimiter).TrimStart() + " " + toDemiliter + delimiter;
-
-            circularShifts.Add(auxLine);
-
-            j = auxLine.IndexOf(delimiter, 0);            
+            foreach (string word in line.Split(delimiter))
+            {
+                CoreInPairs.Add((i + 1, wordOffSet));
+                wordOffSet += word.Length + 2;
+            }
         }
-
-        return circularShifts;
     }
 }
