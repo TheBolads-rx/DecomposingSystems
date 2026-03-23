@@ -6,4 +6,7 @@ Input input = new();
 input.StoreInCore(inputFile);
 
 CircularShift circularShift = new();
-circularShift.StoreWordsInPairs(input.Core, input.LineStarts, input.EndOfWord);
+circularShift.StoreInPairs(input.Core, input.LineStarts, input.EndOfWord);
+
+Alphabetizing alphabetizing = new();
+alphabetizing.StoreSorted(input.Core, circularShift.CoreInPairs);

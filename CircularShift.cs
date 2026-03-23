@@ -6,7 +6,7 @@ public class CircularShift
     {
         CoreInPairs = [];
     }
-    public void StoreWordsInPairs(string core, List<int> lineStarts, char delimiter)
+    public void StoreInPairs(string core, List<int> lineStarts, char delimiter)
     {       
         int lineEnd;
 
@@ -17,9 +17,11 @@ public class CircularShift
             int wordOffSet = lineStarts[i];
 
             foreach (string word in line.Split(delimiter))
-            {
-                CoreInPairs.Add((i + 1, wordOffSet));
-                wordOffSet += word.Length + 2;
+            {   
+                if (word[word.Length - 1] == ' ') continue;
+                
+                CoreInPairs.Add((i, wordOffSet));
+                wordOffSet += word.Trim().Length + 2;
             }
         }
     }
