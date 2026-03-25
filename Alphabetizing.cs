@@ -6,10 +6,9 @@ public class Alphabetizing
     {
         sortedCoreInPairs = [];
     }
-    public void storeSorted(string core, List<(int originalLineNumber, int startingAddress)> corePairs)
+    public void StoreSorted(string core, List<(int originalLineNumber, int startingAddress)> corePairs)
     {       
-        corePairs.Sort((a, b) => core[a.startingAddress].CompareTo(core[b.startingAddress]));
-        sortedCoreInPairs.Clear();
-        sortedCoreInPairs.AddRange(corePairs);
+        sortedCoreInPairs = [.. corePairs]; 
+        sortedCoreInPairs.Sort((a, b) => core[a.startingAddress].CompareTo(core[b.startingAddress]));
     }
 }
