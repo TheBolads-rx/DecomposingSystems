@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ArthurDSN/Projetos/DecomposingSystems/DecomposingSystems.csproj",
-      "projectName": "DecomposingSystems",
-      "projectPath": "/home/ArthurDSN/Projetos/DecomposingSystems/DecomposingSystems.csproj",
+      "projectUniqueName": "/home/ArthurDSN/Projetos/DecomposingSystems/Modularization1/Modularization1.csproj",
+      "projectName": "Modularization1",
+      "projectPath": "/home/ArthurDSN/Projetos/DecomposingSystems/Modularization1/Modularization1.csproj",
       "packagesPath": "/home/ArthurDSN/.nuget/packages/",
-      "outputPath": "/home/ArthurDSN/Projetos/DecomposingSystems/obj/",
+      "outputPath": "/home/ArthurDSN/Projetos/DecomposingSystems/Modularization1/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/ArthurDSN/.nuget/NuGet/NuGet.Config"

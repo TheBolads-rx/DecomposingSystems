@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "DecomposingSystems/1.0.0": {
+      "Modularization1/1.0.0": {
         "runtime": {
-          "DecomposingSystems.dll": {}
+          "Modularization1.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "DecomposingSystems/1.0.0": {
+    "Modularization1/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
