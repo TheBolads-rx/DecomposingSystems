@@ -1,0 +1,15 @@
+/home/ArthurDSN/Projetos/DecomposingSystems/Modularization2/bin/Debug/net8.0/Modularization2
+/home/ArthurDSN/Projetos/DecomposingSystems/Modularization2/bin/Debug/net8.0/Modularization2.deps.json
+/home/ArthurDSN/Projetos/DecomposingSystems/Modularization2/bin/Debug/net8.0/Modularization2.runtimeconfig.json
+/home/ArthurDSN/Projetos/DecomposingSystems/Modularization2/bin/Debug/net8.0/Modularization2.dll
+/home/ArthurDSN/Projetos/DecomposingSystems/Modularization2/bin/Debug/net8.0/Modularization2.pdb
+/home/ArthurDSN/Projetos/DecomposingSystems/Modularization2/obj/Debug/net8.0/Modularization2.GeneratedMSBuildEditorConfig.editorconfig
+/home/ArthurDSN/Projetos/DecomposingSystems/Modularization2/obj/Debug/net8.0/Modularization2.AssemblyInfoInputs.cache
+/home/ArthurDSN/Projetos/DecomposingSystems/Modularization2/obj/Debug/net8.0/Modularization2.AssemblyInfo.cs
+/home/ArthurDSN/Projetos/DecomposingSystems/Modularization2/obj/Debug/net8.0/Modularization2.csproj.CoreCompileInputs.cache
+/home/ArthurDSN/Projetos/DecomposingSystems/Modularization2/obj/Debug/net8.0/Modularization2.sourcelink.json
+/home/ArthurDSN/Projetos/DecomposingSystems/Modularization2/obj/Debug/net8.0/Modularization2.dll
+/home/ArthurDSN/Projetos/DecomposingSystems/Modularization2/obj/Debug/net8.0/refint/Modularization2.dll
+/home/ArthurDSN/Projetos/DecomposingSystems/Modularization2/obj/Debug/net8.0/Modularization2.pdb
+/home/ArthurDSN/Projetos/DecomposingSystems/Modularization2/obj/Debug/net8.0/Modularization2.genruntimeconfig.cache
+/home/ArthurDSN/Projetos/DecomposingSystems/Modularization2/obj/Debug/net8.0/ref/Modularization2.dll
